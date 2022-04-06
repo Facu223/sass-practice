@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+h1, h3 {
+  color: #fff;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid olive;
+}
+
+.form__label {
+  margin: 20px 0;
+  color: white;
+}
+
+.form__input {
+  padding: 8px;
+}
+
+.btn {
+  padding: 10px;
+  background: chocolate;
+  margin-top: 10px;
+}
+
+.textarea {
+  margin: 10px;
+}
+
+p {
+  color: red;
+  border: 1px solid red;
+}
+
+p {
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+nav {
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: purple;
+  text-align: center;
+  background-color: grey;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav li a {
+  text-decoration: none;
+  color: yellow;
+  font-family: Arial;
+  font-weight: 100;
+  font-size: 30px;
+}
+nav li a:hover {
+  color: #000;
+}
+
+.p {
+  color: red;
+  background: green;
+  padding: 5px;
+  text-align: center;
+  font-size: 2em;
+}
+
+.h1 {
+  color: yellow;
+  background: blue;
+  padding: 5px;
+  text-align: center;
+  font-size: 4em;
+}
+
+/*# sourceMappingURL=estilos.css.map */

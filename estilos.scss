@@ -1,0 +1,129 @@
+@use "components/reset"; // Imports
+@use "components/form";
+@use "components/label";
+@use "components/input";
+@use "components/btn";
+@use "components/textarea";
+
+$numero: 30;
+$numero2: 30px;
+$numero3: 30s;
+$string: asdasdAS;
+
+@debug $numero; // Para ver el valor de una variable
+@debug $numero2;
+@debug $numero3;
+@debug $string;
+
+@debug type-of($numero); // Para ver el tipo de una variable
+@debug type-of($numero2);
+@debug type-of($numero3);
+@debug type-of($string);
+
+$color1: red;
+$color2: #000000;
+
+@debug $color1;
+@debug $color2;
+
+@debug type-of($color1);
+@debug type-of($color2);
+
+$lista: 1px solid red;
+@debug $lista;
+@debug type-of($lista); // De tipo lista
+
+$boolean: true;
+$boolean2: false;
+
+@debug $boolean; // tipo boolean
+@debug $boolean2;
+@debug type-of($boolean2);
+
+$map: (
+  primera: yellow,
+  segundo: blue,
+); // Tipo map (en javascript es un objeto)
+
+@debug $map;
+@debug type-of($map);
+
+p {
+  color: $color1;
+  border: $lista;
+}
+
+$numeroasd: 10px;
+
+p {
+  $numeroasd: 30px !global; // Variable local, solo se modifica en p. Si le agrego "!global", la modifica para todos
+  font-size: $numeroasd;
+}
+
+h1 {
+  font-size: $numeroasd;
+}
+
+// Nesting
+
+nav {
+  border: {
+    radius: 10px;
+    width: 1px;
+    style: dashed;
+    color: purple;
+  }
+
+  // Nesting de prefijos
+  text: {
+    align: center;
+  }
+
+  // Nesting de prefijos
+  background: {
+    color: grey;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  li a {
+    text-decoration: none;
+    color: yellow;
+
+    // Nesting de prefijos
+    font: {
+      family: Arial;
+      weight: 100;
+      size: 30px;
+    }
+  }
+
+  li a:hover {
+    // Hover
+    color: #000;
+  }
+}
+
+@mixin textos ($color, $size, $background) {
+  color: $color;
+  background: $background;
+  padding: 5px;
+  text-align: center;
+  font-size: $size;
+}
+
+.p {
+  @include textos(red, 2em, green);
+}
+
+.h1 {
+  @include textos(yellow, 4em, blue)
+}
